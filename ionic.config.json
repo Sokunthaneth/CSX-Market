@@ -1,6 +1,8 @@
 {
   "name": "CSX Market",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "pro_id": "516f251b"
 }
