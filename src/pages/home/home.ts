@@ -9,14 +9,19 @@ import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser'
 export class HomePage {
 
   constructor(public navCtrl: NavController, private iab: InAppBrowser) {
+  }
+
+  ionViewWillEnter() {
     this.openWebPage()
   }
   
   openWebPage(){
     const options : InAppBrowserOptions = {
       zoom: 'no',
-      hidden: 'yes',
+      hideurlbar: 'yes',
+      location: 'no',
+      fullscreen: 'yes',
     }
-    this.iab.create('https://mts.csx.com.kh', '_blank', options)
+    this.iab.create('https://mts.csx.com.kh', '_self', options)
   }
 }
